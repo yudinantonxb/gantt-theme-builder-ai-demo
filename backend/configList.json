@@ -1,0 +1,27 @@
+[
+  {
+    "name": "link_line_width",
+    "description": "Width of dependency link lines in pixels (e.g. 2, 3, 4)",
+    "type": "size"
+  },
+  {
+    "name": "link_radius",
+    "description": "Corner roundness (radius) of link line bends",
+    "type": "size"
+  },
+  {
+    "name": "row_height",
+    "description": "Height (pixels) of each task row (e.g. 50)",
+    "type": "size"
+  },
+  {
+    "name": "bar_height",
+    "description": "Height (pixels) of task bars in the timeline area (e.g. 30)",
+    "type": "size"
+  },
+  {
+    "name": "show_progress",
+    "description": "Enables displaying of the progress inside the task bars (e.g. true). The default value is true.",
+    "type": "boolean"
+  }
+]

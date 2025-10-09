@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" rel="stylesheet">
+    <link href="./src/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Natural Language Interface for DHTMLX Gantt</title>
+  </head>
+  <style></style>
+  <body>
+    <div id="wrapper">
+      <div id="gantt_here" class="gantt-container"></div>
+      <aside id="chat_panel">
+        <div class="chat_tabs">
+            <div class="tab-nav">
+                <button type="button" class="tab-btn tab-btn-chatbot tab-btn-active" data-target-id="0">Chatbot</button>
+                <button type="button" class="tab-btn tab-btn-code" data-target-id="1">Code</button>
+            </div>
+            <div class="tab-content">
+            <div id="chat-tab" class="tab-pane tab-pane-show" data-id="0"></div>
+            
+            <div id="code-tab" class="tab-pane" data-id="1">
+                <div class="code-editors-container">
+                  <div class="editor-section">
+                    <h3>CSS Variables</h3>
+                    <div id="css-editor-container" class="editor-container"></div>
+                    <div class="editor-actions">
+                      <button class="copy-editor-btn code-editor-btn" data-editor="css">Copy</button>
+                      <button class="save-editor-btn code-editor-btn" data-editor="css" disabled>Save</button>
+                      <button class="cancel-editor-btn code-editor-btn" data-editor="css" disabled>Cancel</button>
+                    </div>
+                  </div>
+          
+            <div class="editor-section">
+              <h3>Configuration</h3>
+              <div id="config-editor-container" class="editor-container"></div>
+              <div class="editor-actions">
+                <button class="copy-editor-btn code-editor-btn" data-editor="config">Copy</button>
+                <button class="save-editor-btn code-editor-btn" data-editor="config" disabled>Save</button>
+                <button class="cancel-editor-btn code-editor-btn" data-editor="config" disabled>Cancel</button>
+              </div>
+            </div>
+        </div>
+              </div>
+            </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">Command Guide</h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+           <div class="modal__body-wrapper">
+            <main class="modal__content" id="modal-1-content">
+            <section id="section-theme">
+              <h3>Customising a theme</h3>
+              <div class="cmd">
+                <strong>set_theme</strong>
+                1. Generate CSS variable assignments and configuration settings to customize the Gantt chart theme according to user requirements and apply them to the chart.
+                <b>Prompt example:</b> <code>I want to customise the Gantt chart theme. Create a bright and warm theme for me. Also, increase the height of the rows and bars. Make the link width 4px.</code>
+                <button class="copy-btn" data-text="I want to customise the Gantt chart theme. Create a bright and warm theme for me. Also, increase the height of the rows and bars. Make the link width 4px.">Copy</button>
+                <br>
+                2. Change the current theme.
+                <b>Prompt example:</b> <code>Make tasks a bit lighter.</code>
+                <button class="copy-btn" data-text="Make tasks a bit lighter.">Copy</button>
+              </div>
+              <div class="cmd">
+                <strong>reset_theme</strong>
+                Reset the current Gantt theme by clearing all custom CSS variables (back to defaults).
+                <b>Prompt example:</b> <code>Reset the current theme.</code>
+                <button class="copy-btn" data-text="Reset the current theme.">Copy</button>
+              </div>
+            </section>
+          </main>
+          <button id="btn-scroll-top" class="scroll-top-btn" title="Back to top">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#fff" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#fff" d="m488.832 344.32-339.84 356.672a32 32 0 0 0 0 44.16l.384.384a29.44 29.44 0 0 0 42.688 0l320-335.872 319.872 335.872a29.44 29.44 0 0 0 42.688 0l.384-.384a32 32 0 0 0 0-44.16L535.168 344.32a32 32 0 0 0-46.336 0z"></path></g></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+
+
+      <!-- START: Added Footer -->
+      <div class="dhx_demo-footer">
+        <div class="dhx_layout-cell-content">
+            <a href="https://dhtmlx.com/docs/demo/grid-ai-review-analysis/" title="Previous Demo" class="dhx_slider-btn dhx_slider-btn--prev">
+                <svg width="15" height="15" viewBox="0 0 15 15"><path d="M0.820312 6.67969V8.32031H10.8203L6.25 12.9297L7.42188 14.1016L14.0234 7.5L7.42188 0.898438L6.25 2.07031L10.8203 6.67969H0.820312Z" fill="#fff"></path></svg>
+            </a>
+            <a href="https://docs.dhtmlx.com/docs/demo/form-builder-ai/" title="Next Demo" class="dhx_slider-btn dhx_slider-btn--next">
+                <svg width="15" height="15" viewBox="0 0 15 15"><path d="M0.820312 6.67969V8.32031H10.8203L6.25 12.9297L7.42188 14.1016L14.0234 7.5L7.42188 0.898438L6.25 2.07031L10.8203 6.67969H0.820312Z" fill="#fff"></path></svg>
+            </a>
+            <div class="dhx_demo-footer-text">
+                <h1>AI Helper for DHTMLX Gantt.</h1>
+                <p>Your AI assistant for managing <a href="https://dhtmlx.com/docs/products/dhtmlxGantt/" target="_blank">DHTMLX Gantt</a> from text.</p>
+            </div>
+            <a href="https://github.com/DHTMLX/ai-gantt-maker" class="dhx_sample-btn dhx_sample-btn--cta" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+    <!-- END: Added Footer -->
+
+    <script type="module" src="./src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.34.1/min/vs/loader.js"></script>
+  </body>
+</html>
