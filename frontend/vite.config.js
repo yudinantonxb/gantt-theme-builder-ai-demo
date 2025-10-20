@@ -5,6 +5,7 @@ export default defineConfig(({ mode }) => {
   const socketUrl = env.VITE_SOCKET_URL || 'http://localhost:3001';
 
   return {
+    base: "./",
     server: {
       port: 3000,
       strictPort: true,
